@@ -1,0 +1,1 @@
+ var homeInfoApp = angular.module("homeInfoApp", [])

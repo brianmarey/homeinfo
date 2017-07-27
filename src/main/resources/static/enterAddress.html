@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+    <head>
+        <title>Home Info | Carey Development, LLC</title>
+        <meta content="Enter a U.S. home address and get detailed info about its location" name="description" />
+        
+        <link rel="stylesheet" type="text/css" href="/assets/global/plugins/font-awesome/css/font-awesome.min.css" />
+	    <link rel="stylesheet" type="text/css" href="/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" />
+	    <link rel="stylesheet" type="text/css" href="/assets/global/plugins/bootstrap/css/bootstrap.min.css" />
+	    <link rel="stylesheet" type="text/css" href="/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" />
+	    
+	    <link rel="stylesheet" id="style_components" type="text/css" href="/assets/global/css/components.min.css" />
+	    <link rel="stylesheet" type="text/css" href="/assets/global/css/plugins.min.css" />
+	    
+	    <link rel="stylesheet" type="text/css" href="/assets/layouts/layout3/css/layout.min.css" />
+	    <link rel="stylesheet" type="text/css" id="style_color" href="/assets/layouts/layout3/css/themes/default.min.css" />
+	    <link rel="stylesheet" type="text/css" href="/assets/layouts/layout3/css/custom.min.css" />
+	    
+	    <link rel="shortcut icon" href="/images/careydevicon.png" /> 
+	            
+	    <link rel="stylesheet" type="text/css" href="/assets/pages/css/about.min.css" />
+	    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    </head>
+    
+    <body class="page-container-bg-solid" ng-app="homeInfoApp">
+    	<div ng-include src="'/fragments/topmenuheader.html'"></div>
+        <div class="page-container">
+            <div class="page-content-wrapper">
+                <div class="page-head" style="background-color:#eff3f8;padding-top:40px">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="portlet box blue ">
+                                    <div class="portlet-title">
+                                        <div class="caption">
+                                            <i class="icon-home"></i>
+                                            <span class="caption-subject" style="position:relative;top:2px">Enter Home Address</span>
+                                        </div>
+                                    </div>    
+                                    <div class="portlet-body form">
+                                        <form id="employeeForm" action="@{/enterAddress}" method="POST">                                                            
+                                            <div class="form-body">
+                                                <div>
+                                                    <div class="mt-element-ribbon bg-grey-steel">
+                                                        <div class="ribbon ribbon-color-success uppercase">U.S. Address Only</div>
+                                                            <p class="ribbon-content">Please enter the address of a home in the United States.<br/>
+                                                                Click the "Find Valuation" button at the bottom to see Zillow's current 
+                                                                estimate of what the property is worth.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Street Address</label>                                                                
+                                                    <div>
+                                                        <input type="text" class="form-control" maxlength="64" value="" placeholder="For example: 123 Main Street"/>
+                                                        <span class="help-block"></span>
+                                                    </div>
+                                                </div>                                                                                               
+                                                <div class="form-group">
+                                                    <label>U.S. Zip Code</label>                                                                
+                                                    <div>
+                                                        <input type="text" class="form-control" maxlength="10" value="" placeholder="For example: 90210"/>
+                                                        <span class="help-block"></span>
+                                                    </div>
+                                                </div>                                                 
+                                            </div>
+                                            <div class="form-actions">
+                                                <button type="submit" class="btn blue">Find Valuation</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       	</div>
+		<!--[if lt IE 9]>
+	    <script th:src="@{/assets/global/plugins/respond.min.js}"></script>
+	    <script th:src="@{/assets/global/plugins/excanvas.min.js}"></script> 
+	    <![endif]-->
+	    <script type="text/javascript" src="/assets/global/plugins/jquery.min.js"></script>
+	    <script type="text/javascript" src="/assets/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+	    <script type="text/javascript" src="/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	    <script type="text/javascript" src="/assets/global/plugins/jquery.blockui.min.js"></script>
+	    <script type="text/javascript" src="/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+	    <script type="text/javascript" src="/assets/global/scripts/app.min.js"></script>
+	    <script type="text/javascript" src="/assets/layouts/layout3/scripts/layout.min.js"></script>
+	    <script type="text/javascript" src="/assets/layouts/layout3/scripts/demo.min.js"></script>
+	    <script type="text/javascript" src="/assets/global/scripts/request.js"></script>
+	    <script type="text/javascript" src="/assets/global/scripts/homeInfo.js"></script>
+    </body>
+</html>
