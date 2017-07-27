@@ -11,7 +11,7 @@
 
 	<appender name="FILE-AUDIT"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>/etc/tomcat8/logs/smoothsurfer.log</file>
+		<file>/etc/tomcat8/logs/homeinfo.log</file>
 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
 			<Pattern>
 				%d{yyyy-MM-dd HH:mm:ss} - %msg%n
@@ -19,7 +19,7 @@
 		</encoder>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/etc/tomcat8/logs/smoothsurfer.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<fileNamePattern>/etc/tomcat8/logs/homeinfo.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>10MB</maxFileSize>
